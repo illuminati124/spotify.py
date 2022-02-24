@@ -346,7 +346,7 @@ class HTTPClient:
         spotify_id : str
             The spotify_id to search by.
         """
-        route = self.route("GET", "/playlist/{spotify_id}", spotify_id=spotify_id)
+        route = self.route("GET", "/playlists/{spotify_id}", spotify_id=spotify_id)
         return self.request(route)
 
     def artist_albums(
