@@ -338,6 +338,16 @@ class HTTPClient:
         """
         route = self.route("GET", "/artists/{spotify_id}", spotify_id=spotify_id)
         return self.request(route)
+    
+    def playlist(self, spotify_id) -> Awaitable:
+        """Get Spotify catalog information for a playlist identified by their unique Spotify ID.
+        Parameters
+        ----------
+        spotify_id : str
+            The spotify_id to search by.
+        """
+        route = self.route("GET", "/playlist/{spotify_id}", spotify_id=spotify_id)
+        return self.request(route)
 
     def artist_albums(
         self,
