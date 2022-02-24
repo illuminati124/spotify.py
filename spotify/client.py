@@ -213,7 +213,7 @@ class Client:
         data = await self.http.track(to_id(spotify_id))
         return Track(self, data)
     
-     async def get_playlist(self, spotify_id: str) -> Playlist:
+    async def get_playlist(self, spotify_id: str) -> Playlist:
         """Retrive an playlist with a spotify ID.
 
         Parameters
